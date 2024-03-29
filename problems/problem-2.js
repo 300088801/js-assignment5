@@ -49,6 +49,11 @@ const strings = [
 	'"firstName":"Mace","lastName":"Windu","age":53,"occupation":"Jedi","homePlanet":"Haruun Kal"'
 ]
 
-const jedi = strings // append your code here
+//const jedi = strings.filter( character => character.includes('Jedi')) // append your code here
+
+const jedi = strings.filter( character => character.includes('Jedi')).map( character => {
+	characterObject = JSON.parse(`{${character}}`)
+	return characterObject
+})
 
 test("Problem 2", jedi)

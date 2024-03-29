@@ -38,6 +38,13 @@ const items = [
 
 // Omit the 'age' element
 
-const person = items // append your code here
+const person = items.reduce( (prev, [currKey, currValue] ) => {
+	if (currKey !== 'age') {
+		prev[currKey] = currValue;
+	  }
+	  return prev;
+
+	return prev
+}, {}) // append your code here
 
 test("Problem 4", person)
