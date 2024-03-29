@@ -43,8 +43,6 @@ const person = items.reduce( (prev, [currKey, currValue] ) => {
 		prev[currKey] = currValue;
 	  }
 	  return prev;
-
-	return prev
 }, {}) // append your code here
 
 test("Problem 4", person)
